@@ -1,0 +1,32 @@
+@import './mixins.scss';
+
+.page-header {
+    height: 400px;
+    background-color: red;
+    background-image: url(../../assets/images/featured-image-header.jpg);
+    background-repeat: no-repeat;
+
+
+
+    @include tablet {
+            background-image:url(../../assets/images/featured-image-header-tablet.jpg);
+            height: 320px;
+            background-size: 100%;
+        }
+
+
+    @include mobile {
+        background-image: url(../../assets/images/featured-image-header-mobile.jpg);
+        height: 320px;
+    }
+}
+.page-nav {
+    @include page-content;
+    display: flex;
+    justify-content: space-between;
+    padding-top: $default-page-padding;
+}
+.logo {
+    color: #fff;
+    font-size: 2rem;
+}
