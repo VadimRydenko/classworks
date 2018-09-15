@@ -1,4 +1,4 @@
-var userFirstName = " Vadim";
+/* var userFirstName = " Vadim";
 var userSecondName = " Rudenko";
 var userAge = 25;
 
@@ -8,4 +8,8 @@ var user = {
     age: prompt('Enter you age'),
 }
 
-alert (user.firstName + ' ' +user.secondName + '' + user.age);
+alert (user.firstName + ' ' +user.secondName + '' + user.age); */
+
+
+
+
