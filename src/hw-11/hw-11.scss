@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 * {
     box-sizing: border-box;
     &:active, &:hover, &:focus {
@@ -37,6 +38,7 @@
 
 
 $item-font-color: #ffffff;
+$background-color:#04082c;
  
  .main {
     color: $item-font-color;
@@ -67,26 +69,30 @@ $item-font-color: #ffffff;
     padding-top: 11px;
     text-align: left;
 }
- 
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 
 .menu_items {
     padding: 20px 25px;
     text-align: left;
-    font-size:24px;
+    
+.btn{
+      font-size:24px;
+      background-color: $background-color;
+      border: none;
+      color: #ffffff;
+    }
+
 }
 .menu {
     width: 320px;
     height: 277px;
     background-color:#04082c;
     transition: 0.4s;
-    transform: scaleY(0);
+    transform: scaleY(1);
     transform-origin: top;
 }
 .open_menu {
-    transform: scaleY(1);
+    transform: scaleY(0);
     transition: 0.4s;
     transform-origin: top;
 }   
