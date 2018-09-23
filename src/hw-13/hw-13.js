@@ -12,16 +12,21 @@ function openIcon () {
     window.classList.add('open');
 }
 
-function showMessage () {
+function showMessage (evt) {
+    evt.preventDefault;
+
     const username = inputName.value;
     const password = inputPassword.value;
 
     if (username === adminName && adminPassword === password) {
         window.textContent = 'Hello admin';
     }else {
-        window.textContent = 'Hello'+ username;
+        window.textContent = 'Hello '+ username;
     }
+    return false;
 }
 btn.addEventListener('click',openIcon,showMessage);
 
 btn.onclick = showMessage;
+
+
