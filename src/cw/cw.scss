@@ -1,12 +1,30 @@
-.box {
-    height: 300px;
+*{
+    box-sizing: border-box;
+}
+.box{
     width: 100px;
-    background-color: aqua;
-    flex-direction: column;
-    display: flex;
+    height:300px;
+    margin:20%;
+    background-color: black;
+    text-align: center;
 }
-.select__optionn {
+.select {
+    height: 33%;
     width: 100%;
-    height: 30%;
-    padding: 20%;
+    border-radius: 100%;
+    border: 1px solid transparent;
+    &_green {
+        background-color: rgb(9, 51, 9);
+    }
+    &_yellow{
+        background-color: rgb(99, 99, 16);
+    }
+    &_red {
+        background-color:rgb(85, 16, 16);
+    }
 }
+
+
+
+
+

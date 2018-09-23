@@ -7,10 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="box">
-            <div class="select__option"><button></button></div>
-            <div class="select__option"><button></button></div>
-            <div class="select__option"><button></button></div>
-    </div>
+<div class="box">
+    <button class="select select_green" onclick="offLight(this, 'green')" ></button>
+    <button class="select select_yellow" onclick="offLight(this, 'yellow')"></button>
+    <button class="select select_red" onclick="offLight(this, 'red')"></button>
+</div>
+<script>
+function offLight(elmnt,color) {
+   const tablinks = document.getElementsByClassName("select");
+    for (let i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    elmnt.style.backgroundColor = color;
+
+}
+</script>
+    
 </body>
 </html>

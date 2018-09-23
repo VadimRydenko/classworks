@@ -1,0 +1,18 @@
+.main__close {
+    display: flex;
+    .text {
+        display: none;
+    }
+&__open {
+    .text {
+        display: flex;
+        }
+    }
+}
+
+.block {
+    display: none;
+    &_visible{
+        display: block;
+    }
+}
