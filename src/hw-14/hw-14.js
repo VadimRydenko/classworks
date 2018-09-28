@@ -1,0 +1,84 @@
+import './hw-14.scss';
+
+//  function on_off (mainBlock) {
+//     const btn = mainBlock.querySelector('.turn');
+//     const main = document.querySelector('.main');
+
+//     function toggle () {
+//      if (main.classList.contains('main__on')) {
+//          off () ;
+//      }else { on ();
+//      }
+//     }
+
+//     function off () {
+//         main.classList.remove('main__on')
+//     }
+
+//     function on () {
+//         main.classList.add('main__on');
+//     }
+
+//     btn.onclick = toggle;
+
+//  }
+
+//  on_off (document.querySelector('#block-1'));
+//  on_off (document.querySelector('#block-2'));
+ 
+
+
+
+
+function on_off (mainBlock) {
+    const lights = mainBlock.querySelector('.light');
+    const btn = mainBlock.querySelector('.turn');
+    let activeLightIndex = 0;
+
+    function startAutoSwitch () {
+        setInterval (()=>{
+            console.log(activeLightIndex);
+            if (activeLightIndex +1 >1 ) {
+               activeLightIndex =0;
+            }else {
+            activeLightIndex++;
+            }
+            if (activeLightIndex === 1) {
+                lights.classList.add('light__on');
+            }else {
+                lights.classList.remove('light__on');
+            } 
+        },1000);
+ 
+    }
+    btn.addEventListener('click',startAutoSwitch,);
+    btn.addEventListener('click',switcOnOffButton,);
+    // btn.addEventListener('click',selectButtonText,);
+
+
+    // function switcOnOffButton () {
+    // btn.classList.toggle('turn__on');
+    // }
+    function switcOnOffButton () {
+        if (btn.classList.contains('turn__on')){
+            off ();
+        }else {
+            on ();
+        }
+    }
+
+    function on () {
+        btn.classList.add('turn__on');
+        btn.innerHTML="off";
+    }
+    function off () {
+        btn.classList.remove('turn__on');
+        btn.innerHTML="on";
+    }
+
+}
+ on_off (document.querySelector('#block-1'));
+ on_off (document.querySelector('#block-2'));
+ 
+
+

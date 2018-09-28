@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(138, 230, 173); 
+}
+.main {
+    width: 100px;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
+    flex-direction: column;
+}
+.light {
+    height: 80px;
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 10px;
+    &__on {
+        background-color: red;
+    }
+}
+.turn {
+    border-radius: 4px;
+    background-color:green;
+    border: none;
+    height: 30px;
+    &__on {
+        background-color: red;
+    }
+}
+
+
+
