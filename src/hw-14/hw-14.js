@@ -28,15 +28,15 @@ function on_off (mainBlock) {
     }
 
     btn.addEventListener('click',startAutoSwitch,);
-    btn.addEventListener('click',switcOnOffButton,);
+    btn.addEventListener('click',switchOnOffButton,);
 
-    function switcOnOffButton () {
+    function switchOnOffButton () {
         if (btn.classList.contains('turn__on')){
             off ();
             mainBlock.addEventListener('click', stopAutoSwitch);
         }else {
             on ();
-            // return function startAutoSwitch
+            // (function() {startAutoSwitch()});
             // mainBlock.addEventListener('click', startAutoSwitch);
         }
     }
