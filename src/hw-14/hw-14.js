@@ -35,9 +35,9 @@ function on_off (mainBlock) {
             off ();
             mainBlock.addEventListener('click', stopAutoSwitch);
         }else {
-            on ();
-            // (function() {startAutoSwitch()});
-            // mainBlock.addEventListener('click', startAutoSwitch);
+            on ()
+           (function() {startAutoSwitch()});
+            mainBlock.addEventListener('click', startAutoSwitch);
         }
     }
 
