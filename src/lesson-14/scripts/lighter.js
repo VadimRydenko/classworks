@@ -1,44 +1,43 @@
-import "../styles/lighter.scss";
-
+import '../styles/lighter.scss';
 
 export class Lighter {
-    constructor (parentNode, lampColor) {
-        this.parentNode = parentNode;
-        this.lampColor = lampColor;
-        this.isActive = false;
-        this.render();
-        this.handlEvent();
-    }
-    handlEvent () {
-        this.control.addEventListener('click',() =>{
-            this.lamp.style.backgroundColor = this.lampColor || 'red';
-            if (this.isActive ===false){
-                this.active ();
-            }else {
-                this.deactive();
-            }
-        });
-    }
+  constructor(parentNode, lampColor) {
+    this.parentNode = parentNode;
+    this.lampColor = lampColor;
+    this.isActive = false;
+    this.render();
+    this.handleEvents();
+  }
 
-    active () {
-        this.lamp.style.backgroundColor = this.lampColor || 'red';
-        this.isActive = true;
-    }
+  handleEvents() {
+    this.control.addEventListener('click', () => {
+      if (this.isActive === false) {
+        this.activate();
+      } else {
+        this.deactivate();
+      }
+    });
+  }
 
-    deactive () {
-        this.lamp.style.backgroundColor = 'transparent';
-        this.isActive = false;
-    }
+  activate() {
+    this.lamp.style.backgroundColor = this.lampColor || 'red';
+    this.isActive = true;
+  }
 
-    render () {
-        this.lamp = document.createElement('div');
-        this.control = document.createElement('button');
+  deactivate() {
+    this.lamp.style.backgroundColor = 'transparent';
+    this.isActive = false;
+  }
 
-        this.lamp.classList.add('lighter__lamp');
-        this.control.classList.add('lighter__control');
-        this.parentNode.classList.add('lighter');
+  render() {
+    this.lamp = document.createElement('div');
+    this.control = document.createElement('button');
 
-        this.parentNode.appendChild(this.lamp);
-        this.parentNode.appendChild(this.control);
-    }
+    this.lamp.classList.add('lighter__lamp');
+    this.control.classList.add('lighter__control');
+    this.parentNode.classList.add('lighter');
+
+    this.parentNode.appendChild(this.lamp);
+    this.parentNode.appendChild(this.control);
+  }
 }
